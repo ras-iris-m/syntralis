@@ -302,7 +302,7 @@ const Auth = () => {
 							enable: true,
 							offset: { x: 0, y: 0 },
 						},
-						shape: { options: {}, type: "circle" },
+						shape: { options: { }, type: "circle" },
 						size: {
 							random: { enable: false, minimumValue: 1 },
 							value: { min: 0.1, max: 4 },

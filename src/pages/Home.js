@@ -131,7 +131,7 @@ const Main = () => {
 
 	const [filter, setFilter] = useState(0);
 	const filterTables = (a) => {
-		filter == a ? setFilter(0) : setFilter(a);
+		filter === a ? setFilter(0) : setFilter(a);
 	};
 
 	const [tableList, setTableList] = useState([
@@ -334,7 +334,7 @@ const Main = () => {
 		if (user.iduser === 0) {
 			history.replace("/");
 		}
-		if (user.username == "admin") {
+		if (user.username === "admin") {
 			getAdminResult();
 		} else getTables();
 	}, []);
@@ -378,7 +378,7 @@ const Main = () => {
 				</div>
 			</div>
 
-			{user.username == "admin" ? (
+			{user.username === "admin" ? (
 				<div className="admin">
 					<h1>Bienvenue Admin.</h1>
 					<div className="list">
@@ -548,7 +548,7 @@ const Main = () => {
 									<rect
 										className="b fg"
 										style={
-											filter != 0
+											filter !== 0
 												? { opacity: ".6" }
 												: { opacity: "0" }
 										}
@@ -651,7 +651,7 @@ const Main = () => {
 										<circle
 											className={
 												"tab " +
-												(filter == 8 || activeTable == 1
+												(filter === 8 || activeTable === 1
 													? "active"
 													: "")
 											}
@@ -665,7 +665,7 @@ const Main = () => {
 										<circle
 											className={
 												"tab " +
-												(filter == 8 || activeTable == 2
+												(filter === 8 || activeTable === 2
 													? "active"
 													: "")
 											}
@@ -680,7 +680,7 @@ const Main = () => {
 										<circle
 											className={
 												"tab " +
-												(filter == 8 || activeTable == 3
+												(filter === 8 || activeTable === 3
 													? "active"
 													: "")
 											}
@@ -697,7 +697,7 @@ const Main = () => {
 										<rect
 											className={
 												"tab " +
-												(filter == 2 || activeTable == 4
+												(filter === 2 || activeTable === 4
 													? "active"
 													: "")
 											}
@@ -714,7 +714,7 @@ const Main = () => {
 										<rect
 											className={
 												"tab " +
-												(filter == 2 || activeTable == 5
+												(filter === 2 || activeTable === 5
 													? "active"
 													: "")
 											}
@@ -731,7 +731,7 @@ const Main = () => {
 										<rect
 											className={
 												"tab " +
-												(filter == 2 || activeTable == 6
+												(filter === 2 || activeTable === 6
 													? "active"
 													: "")
 											}
@@ -748,7 +748,7 @@ const Main = () => {
 										<rect
 											className={
 												"tab " +
-												(filter == 2 || activeTable == 7
+												(filter === 2 || activeTable === 7
 													? "active"
 													: "")
 											}
@@ -766,7 +766,7 @@ const Main = () => {
 										<rect
 											className={
 												"tab " +
-												(filter == 2 || activeTable == 8
+												(filter === 2 || activeTable === 8
 													? "active"
 													: "")
 											}
@@ -786,7 +786,7 @@ const Main = () => {
 										<rect
 											className={
 												"tab " +
-												(filter == 4 || activeTable == 9
+												(filter === 4 || activeTable === 9
 													? "active"
 													: "")
 											}
@@ -804,7 +804,7 @@ const Main = () => {
 										<rect
 											className={
 												"tab " +
-												(filter == 4 || activeTable == 10
+												(filter === 4 || activeTable === 10
 													? "active"
 													: "")
 											}
@@ -822,7 +822,7 @@ const Main = () => {
 										<rect
 											className={
 												"tab " +
-												(filter == 4 || activeTable == 11
+												(filter === 4 || activeTable === 11
 													? "active"
 													: "")
 											}
@@ -840,7 +840,7 @@ const Main = () => {
 										<rect
 											className={
 												"tab " +
-												(filter == 4 || activeTable == 12
+												(filter === 4 || activeTable === 12
 													? "active"
 													: "")
 											}
@@ -863,7 +863,7 @@ const Main = () => {
 						<div
 							className="popup"
 							style={
-								activeTable == 0
+								activeTable === 0
 									? { visibility: "hidden", opacity: "0" }
 									: { visibility: "visible", opacity: "1" }
 							}
